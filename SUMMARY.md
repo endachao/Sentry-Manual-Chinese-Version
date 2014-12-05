@@ -1,6 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* [测试章](1.md)
-* 
-	*[install]()
+* [开始使用](1.md)
+   * [安装](install.md)
