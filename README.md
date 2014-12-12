@@ -1,12 +1,10 @@
-```
-laravel 交流群 188128412
 
-```
+> laravel 交流群 188128412
 
-如果文档中有翻译错误 or 技术逻辑错误，请 [@袁超](http://weibo.com/28ex) 新浪微博，我会在第一时间进行修正处理
+> 如果文档中有翻译错误 or 技术逻辑错误，请 [@袁超](http://weibo.com/28ex) 新浪微博，我会在第一时间进行修正处理
 
 
-Sentry-Manual-Chinese-Version
+laravel Sentry 中文教程
 =============================
 
 
