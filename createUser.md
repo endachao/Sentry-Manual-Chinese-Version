@@ -102,3 +102,61 @@ catch (Cartalyst\Sentry\Users\UserExistsException $e)
 
 
 
+#### 创建用户 之 register 注册用户
+
+上面我们讲解了 创建用户，本节我们讲解下 注册用户。
+
+需求如下：
+	用户通过 表单注册用户，初始注册的 用户是不可以登录的，必须通过邮件激活用户，这个需求我们怎么做呢？
+	
+其实，在 sentry 中，为我们提供了 一条龙的 用户体系服务，这些 在 sentry 中都变的很简单
+
+我们先讲解 注册用户，产生激活码吧
+
+
+```
+try
+{
+    // 从表单收集的数据 注册用户
+    $user = Sentry::register(array(
+        'email'    => 'yccphp@163.com',
+        'password' => '123456',
+    ));
+
+    // 获取此用户的 激活码
+    $activationCode = $user->getActivationCode();
+
+    // 你可以继续 ，把激活码通过短信，或者 email 发送给 用户
+}
+catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+{
+    echo '必须的字段不全';
+}
+catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
+{
+    echo '没有提供密码';
+}
+catch (Cartalyst\Sentry\Users\UserExistsException $e)
+{
+    echo '用户已存在';
+}
+
+```
+我们看上面的代码，首先我们调用 register 注册了一个新用户，这个 register 的参数如下
+
+Param        | Required | Default | Type    | Description
+------------ | -------- | ------- | ------- | -----------------------------------
+$credentials | true     | null    | array   | 用户的资料。
+$activate    | false    | false   | boolean | 是否手动激活
+
+
+我们看 第二个参数 activate ，默认是 false ，就是需要会员手动来激活。
+
+我们上面的代码，就是需要会员手动激活，然后我们调用了 getActivationCode ，产生了一个 激活码，来作为激活用户的凭证
+
+
+如果我们不需要会员手动激活，只需要要 把 第二个参数设置为 true ,就可以跳过此步骤
+
+
+
+好了，我们已经完成了，注册用户，产生激活码的步骤了，至于怎么激活用户呢？请看 [3.5激活用户](actUser.md)
