@@ -14,7 +14,6 @@
    * [激活用户](actUser.md)
    * [重置密码](restUser.md)
    * [查询用户方法集合](selectUser.md)
-   
 * [分组](group/groupList.md)
    * [创建分组](group/createGroup.md)
    * [修改用户](group/updateGroup.md)
