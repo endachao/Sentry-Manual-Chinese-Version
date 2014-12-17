@@ -13,7 +13,7 @@
 ```
 try
 {
-    // 创建一个用户 下面字段是必须的
+    // 创建一个用户 login字段是必须的 默认是 email 可配置，参考 [2.2 配置登陆字段](setlogin.md)
     $user = Sentry::createUser(array(
         'email'     => 'yccphp@163.com',
         'password'  => '123456',
@@ -28,7 +28,7 @@ try
 }
 catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
 {
-    echo '必须的字段不全';
+    echo 'login 字段是必须的';
 }
 catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
 {
@@ -71,7 +71,7 @@ try
 }
 catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
 {
-    echo '必须字段不全';
+    echo 'login 字段是必须的';
 }
 catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
 {
@@ -130,7 +130,7 @@ try
 }
 catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
 {
-    echo '必须的字段不全';
+    echo 'login 字段是必须的';
 }
 catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
 {

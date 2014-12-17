@@ -35,7 +35,7 @@ try
 }
 catch (Cartalyst\Sentry\Users\UserExistsException $e)
 {
-    echo '必要字段不全';
+    echo 'login 字段是必须的';
 }
 catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
 {
@@ -89,7 +89,7 @@ try
 }
 catch (Cartalyst\Sentry\Users\UserExistsException $e)
 {
-    echo '必要字段不全';
+    echo 'login 字段是必须的';
 }
 catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
 {

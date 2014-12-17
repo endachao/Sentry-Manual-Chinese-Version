@@ -5,6 +5,8 @@
    * [安装](install.md)
 * [基础使用](basics.md)
    * [登陆&登出&检测是否登陆](login.md)
+   * [配置登陆字段](setlogin.md)
+   * [权限篇](priLogin.md)
 * [用户](userList.md)
    * [创建用户](createUser.md)
    * [修改用户](updateUser.md)
