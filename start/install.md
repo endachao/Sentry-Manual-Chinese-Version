@@ -9,6 +9,9 @@ composer 是一个项目依赖管理工具，我们把我们需要安装的 sent
 
 往里面写入
 ```
+"require": {
+        "cartalyst/sentry": "2.1.4"
+	},
 	"require-dev": {
         "way/generators": "~2.0"
     },
