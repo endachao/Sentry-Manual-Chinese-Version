@@ -8,10 +8,11 @@
 composer 是一个项目依赖管理工具，我们把我们需要安装的 sentry 版本号加入进入，执行安装命令后，会自动帮我们安装 sentry 并且安装其依赖的软件包
 
 往里面写入
+
 ```
-	"require-dev": {
-        "way/generators": "~2.0"
-    },
+"require": {
+        "cartalyst/sentry": "2.1.4"
+}
 
 ```
 
